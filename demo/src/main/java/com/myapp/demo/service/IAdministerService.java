@@ -39,4 +39,9 @@ public interface IAdministerService {
      * 根据账号删除
      */
     void deleteById(Integer id);
+
+    /**
+     * 根据账号获得管理员
+     */
+    Administer findAdministerByAccount(String acc);
 }
