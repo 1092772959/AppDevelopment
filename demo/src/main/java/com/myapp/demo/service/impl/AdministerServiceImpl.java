@@ -52,4 +52,10 @@ public class AdministerServiceImpl implements IAdministerService {
     public void deleteById(Integer id) {
         this.admDao.deleteById(id);
     }
+
+    //根据账号获得对象
+    @Override
+    public Administer findAdministerByAccount(String acc) {
+        return admDao.findByAccNum(acc);
+    }
 }
