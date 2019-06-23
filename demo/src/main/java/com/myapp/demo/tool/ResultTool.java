@@ -10,7 +10,7 @@ import static com.myapp.demo.model.ResultCode.success;
 /**
  * @program: demo
  * @description: 返回数据类型
- * @author: tyq
+ * @author: ydc
  * @create: 2019-04-25 13:59
  **/
 public class ResultTool {

@@ -35,6 +35,7 @@ public class ManagerLoginController {
         this.administerService = administerService;
     }
 
+    // 管理员登录，提供账号和密码，后端验证
     @RequestMapping("/managerLogin")
     public Result ManagerLogin(@RequestParam UserLogin userLogin){
         Administer administer = administerService.findAdministerByAccount(userLogin.getUserId());
@@ -48,4 +49,6 @@ public class ManagerLoginController {
         tokenResponse.setUserId(administer.getId().toString());
         return ResultTool.success(tokenResponse);
     }
+
+
 }
