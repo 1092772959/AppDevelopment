@@ -26,6 +26,30 @@ public class Prize {
   @Column(name="src_url")
   private String srcUrl;
 
+  //表示是否对于该用户是否兑换过
+  @Transient
+  private Boolean redeemed;
+
+  //表示是否对于该用户是否可兑换
+  @Transient
+  private Boolean available;
+
+  public Boolean getRedeemed() {
+    return redeemed;
+  }
+
+  public void setRedeemed(Boolean redeemed) {
+    this.redeemed = redeemed;
+  }
+
+  public Boolean getAvailable() {
+    return available;
+  }
+
+  public void setAvailable(Boolean available) {
+    this.available = available;
+  }
+
   public Integer getId() {
     return id;
   }
@@ -43,7 +67,6 @@ public class Prize {
     this.adminId = adminId;
   }
 
-
   public String getTitle() {
     return title;
   }
@@ -52,7 +75,6 @@ public class Prize {
     this.title = title;
   }
 
-
   public Integer getStepNeed() {
     return stepNeed;
   }
@@ -60,7 +82,6 @@ public class Prize {
   public void setStepNeed(Integer stepNeed) {
     this.stepNeed = stepNeed;
   }
-
 
   public String getContent() {
     return content;
@@ -85,6 +106,10 @@ public class Prize {
             ", adminId=" + adminId +
             ", title='" + title + '\'' +
             ", stepNeed=" + stepNeed +
+            ", content='" + content + '\'' +
+            ", srcUrl='" + srcUrl + '\'' +
+            ", redeemed=" + redeemed +
+            ", available=" + available +
             '}';
   }
 }

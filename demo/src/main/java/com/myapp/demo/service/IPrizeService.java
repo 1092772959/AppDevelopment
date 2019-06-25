@@ -14,11 +14,11 @@ public interface IPrizeService {
     List<Prize> getAllPrize();
 
     /**
-     * 查询当前步数能够获取的奖品
-     * @param step
+     * 查询对于当前用户的奖品以及其附加属性
+     * @param userId
      * @return
      */
-    List<Prize> getAccessiblePrize(Integer step);
+    List<Prize> getPrizeByUserId(Integer userId);
 
     /**
      * 增加奖品

@@ -26,5 +26,4 @@ public interface ITicketDao extends JpaRepository<Ticket, Integer> {
 
     @Override
     <S extends Ticket> S save(S s);
-
 }

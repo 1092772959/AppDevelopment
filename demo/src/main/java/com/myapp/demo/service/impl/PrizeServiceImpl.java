@@ -1,12 +1,15 @@
 package com.myapp.demo.service.impl;
 
+import com.myapp.demo.dao.IMyPrizeDao;
 import com.myapp.demo.dao.IPrizeDao;
+import com.myapp.demo.entity.MyPrize;
 import com.myapp.demo.entity.Prize;
 import com.myapp.demo.service.IPrizeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -16,6 +19,9 @@ public class PrizeServiceImpl implements IPrizeService {
 
     @Autowired
     private IPrizeDao prizeDao;
+
+    @Autowired
+    private IMyPrizeDao myPrizeDao;
 
     @Override
     public Prize getPrizeById(Integer id) {
@@ -28,8 +34,29 @@ public class PrizeServiceImpl implements IPrizeService {
     }
 
     @Override
-    public List<Prize> getAccessiblePrize(Integer step) {
-        return prizeDao.findByStepNeedLessThanEqualOrderByStepNeedAsc(step);
+    public List<Prize> getPrizeByUserId(Integer userId) {
+        List<Prize> res = this.prizeDao.findAll();
+
+        List<Integer> myPrizesId = this.myPrizeDao.findAllByUserId(userId);
+
+        int curPrizeId = myPrizesId.get(0), ptr = 0,sz = myPrizesId.size();
+        for(Prize pz: res){
+            if(ptr>= sz){               //此时该用户的已取奖品列表遍历完
+                pz.setRedeemed(false);
+                continue;
+            }
+            int nowId = pz.getId();
+            if(nowId == curPrizeId){        //此奖品对改用户已被兑换
+                pz.setRedeemed(true);
+                ptr++;
+                if(ptr<sz){
+                    curPrizeId = myPrizesId.get(ptr);
+                }
+            }else{
+                pz.setRedeemed(false);
+            }
+        }
+        return res;
     }
 
     @Override

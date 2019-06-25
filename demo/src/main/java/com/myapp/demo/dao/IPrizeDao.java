@@ -2,6 +2,7 @@ package com.myapp.demo.dao;
 
 import com.myapp.demo.entity.Prize;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -31,5 +32,4 @@ public interface IPrizeDao extends JpaRepository<Prize, Integer> {
      */
     @Override
     void deleteById(Integer integer);
-
 }

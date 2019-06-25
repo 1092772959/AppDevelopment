@@ -3,6 +3,7 @@ package com.myapp.demo;
 import com.myapp.demo.component.MailService;
 import com.myapp.demo.dao.*;
 import com.myapp.demo.entity.Article;
+import com.myapp.demo.entity.Prize;
 import com.myapp.demo.entity.User;
 import com.myapp.demo.entity.indirect.UserStep;
 import com.myapp.demo.service.*;
@@ -122,7 +123,16 @@ public class DemoApplicationTests {
     private MailService mailService;
 
     @Test
-    public void testSimpleMail() throws Exception {
-        mailService.sendSimpleMail("1092772959@qq.com","test simple mail"," hello this is simple mail");
+    public void testSimpleMail() {
+        String [] to = {"1092772959@qq.com"};
+        mailService.sendSimpleMail(to,"test simple mail"," hello this is simple mail");
+    }
+
+    @Test
+    public void testRedeemed(){
+        List<Prize> res = this.prizeService.getPrizeByUserId(1);
+        for(Prize ss : res){
+            System.out.println(ss);
+        }
     }
 }

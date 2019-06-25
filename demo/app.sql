@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 22/06/2019 21:36:54
+ Date: 25/06/2019 14:47:34
 */
 
 SET NAMES utf8mb4;
@@ -37,7 +37,7 @@ CREATE TABLE `account`  (
   `icon_path` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
   `bg_path` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of account
@@ -59,7 +59,7 @@ CREATE TABLE `administer`  (
   `pswd` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `email` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of administer
@@ -104,7 +104,7 @@ CREATE TABLE `favorite`  (
   INDEX `article_id`(`article_id`) USING BTREE,
   CONSTRAINT `favorite_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `account` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `favorite_ibfk_2` FOREIGN KEY (`article_id`) REFERENCES `article` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of favorite
@@ -124,7 +124,7 @@ CREATE TABLE `inquiry`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `userid`(`userid`) USING BTREE,
   CONSTRAINT `inquiry_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `account` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of inquiry
@@ -147,12 +147,28 @@ CREATE TABLE `message`  (
   INDEX `receive_id`(`receive_id`) USING BTREE,
   CONSTRAINT `message_ibfk_1` FOREIGN KEY (`send_id`) REFERENCES `account` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `message_ibfk_2` FOREIGN KEY (`receive_id`) REFERENCES `account` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of message
 -- ----------------------------
 INSERT INTO `message` VALUES (1, 1, 2, '测试私信', '2019-06-19', 0);
+
+-- ----------------------------
+-- Table structure for my_prize
+-- ----------------------------
+DROP TABLE IF EXISTS `my_prize`;
+CREATE TABLE `my_prize`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `prize_id` int(11) NOT NULL,
+  `get_time` datetime(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE,
+  INDEX `user_id`(`user_id`) USING BTREE,
+  INDEX `prize_id`(`prize_id`) USING BTREE,
+  CONSTRAINT `my_prize_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `account` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  CONSTRAINT `my_prize_ibfk_2` FOREIGN KEY (`prize_id`) REFERENCES `prize` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for myticket
@@ -212,7 +228,7 @@ CREATE TABLE `reply`  (
   INDEX `admin_id`(`admin_id`) USING BTREE,
   CONSTRAINT `reply_ibfk_1` FOREIGN KEY (`inquiry_id`) REFERENCES `inquiry` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `reply_ibfk_2` FOREIGN KEY (`admin_id`) REFERENCES `administer` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of reply
@@ -234,7 +250,7 @@ CREATE TABLE `step`  (
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `userid`(`userid`) USING BTREE,
   CONSTRAINT `step_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `account` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of step

@@ -22,10 +22,12 @@ public class MailService {
     @Autowired
     private JavaMailSender mailSender;
 
+    //注入配置中的发送方
     @Value("${mail.fromMail.addr}")
     private String host;
 
-    public void sendSimpleMail(String to, String subject, String content) {
+    //简单邮件
+    public void sendSimpleMail(String []to, String subject, String content) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(host);
         message.setTo(to);
@@ -38,4 +40,5 @@ public class MailService {
             logger.error("发送简单邮件时发生异常！", e);
         }
     }
+
 }

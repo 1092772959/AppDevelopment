@@ -2,12 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b455304a-9c04-4e3d-8a93-e35f639e5cba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IMyPrizeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/MyPrize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.sql" beforeDir="false" afterPath="$PROJECT_DIR$/app.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myapp/demo/component/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myapp/demo/component/MailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IPrizeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IPrizeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/ITicketDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/ITicketDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Prize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Prize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IPrizeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IPrizeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/PrizeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/PrizeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/myapp/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/myapp/demo/DemoApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myapp/demo/component/IMailService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/myapp/demo/component/MailServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myapp/demo/component/MailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myapp/demo/component/MailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myapp/demo/dao/IPrizeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myapp/demo/dao/IPrizeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myapp/demo/entity/Prize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myapp/demo/entity/Prize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myapp/demo/service/IAdministerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myapp/demo/service/IAdministerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myapp/demo/service/IPrizeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myapp/demo/service/IPrizeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myapp/demo/service/impl/AdministerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myapp/demo/service/impl/AdministerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/myapp/demo/service/impl/PrizeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/myapp/demo/service/impl/PrizeServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/myapp/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/myapp/demo/DemoApplicationTests.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -49,11 +66,22 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
         <option value="Interface" />
       </list>
@@ -67,6 +95,9 @@
       <find>sendId</find>
       <find>receiveId</find>
       <find>getById</find>
+      <find>top</find>
+      <find>topNum</find>
+      <find>getMyPrize</find>
     </findStrings>
     <replaceStrings>
       <replace>Date</replace>
@@ -74,6 +105,7 @@
       <replace>senderId</replace>
       <replace>reveiverId</replace>
       <replace>getInquiryById</replace>
+      <replace>getPrizeByUserId</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -82,24 +114,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IPrizePicDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/imp/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IAdministerDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/imp/AdministerServiceImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/imp/UserServiceImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/AdministerServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/StepServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IStepDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/secondhand/UserStep.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IUserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/indirect/PrPic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Prize.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/StepService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/indirect/UserStep.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IPrizeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/PrizeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IPrizeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IMessageService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/MessageServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IMessageDao.java" />
@@ -116,7 +136,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IArticleDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IFavoriteDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/ITicketDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IMyticketDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Myticket.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/TicketServiceImpl.java" />
@@ -128,10 +147,23 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IAdministerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IEmailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/component/MailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/component/IMailService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/component/MailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/test/TestConnnection.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/test.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/test/TestConnection.java" />
+        <option value="D:/Workplace/Spring_boot_learn/project/src/main/java/com/example/demo/Controller/TestConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/component/MailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/cotroller/TestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/ITicketDao.java" />
+        <option value="$PROJECT_DIR$/app.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/MyPrize.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IPrizeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IPrizeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IMyPrizeDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/myapp/demo/DemoApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Prize.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/PrizeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
@@ -143,7 +175,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-30" />
     <option name="y" value="340" />
     <option name="width" value="1350" />
@@ -155,6 +187,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,6 +227,34 @@
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -220,19 +282,18 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561296400953" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561453120901" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -249,7 +310,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DemoApplicationTests.testSimpleMail">
+  <component name="RunManager" selected="JUnit.DemoApplicationTests.testRedeemed">
     <configuration name="DemoApplicationTests.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -298,6 +359,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DemoApplicationTests.testRedeemed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.myapp.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.myapp.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.myapp.demo.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="testRedeemed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DemoApplicationTests.testSimpleMail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -314,22 +391,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoApplicationTests.testStepService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.myapp.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.myapp.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.myapp.demo.DemoApplicationTests" />
-      <option name="METHOD_NAME" value="testStepService" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.myapp.demo.DemoApplication" />
@@ -339,11 +400,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DemoApplicationTests.testRedeemed" />
         <item itemvalue="JUnit.DemoApplicationTests.testSimpleMail" />
         <item itemvalue="JUnit.DemoApplicationTests.test5" />
         <item itemvalue="JUnit.DemoApplicationTests.test4" />
         <item itemvalue="JUnit.DemoApplicationTests.test3" />
-        <item itemvalue="JUnit.DemoApplicationTests.testStepService" />
       </list>
     </recent_temporary>
   </component>
@@ -367,19 +428,12 @@
       <workItem from="1561168044028" duration="26838000" />
       <workItem from="1561211790690" duration="3718000" />
       <workItem from="1561290515219" duration="690000" />
+      <workItem from="1561424195176" duration="5973000" />
+      <workItem from="1561438270191" duration="13485000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DemoApplicationTests_test4 - 2019.06.22 at 20h 50m 00s.xml">
-      <configuration name="DemoApplicationTests.test4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DemoApplicationTests_test4 - 2019.06.22 at 20h 50m 52s.xml">
-      <configuration name="DemoApplicationTests.test4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DemoApplicationTests_test5 - 2019.06.22 at 21h 11m 24s.xml">
-      <configuration name="DemoApplicationTests.test5" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DemoApplicationTests_test5 - 2019.06.22 at 21h 13m 14s.xml">
       <configuration name="DemoApplicationTests.test5" configurationId="JUnit" />
     </history-entry>
@@ -401,14 +455,24 @@
     <history-entry file="DemoApplicationTests_testSimpleMail - 2019.06.22 at 23h 03m 28s.xml">
       <configuration name="DemoApplicationTests.testSimpleMail" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DemoApplicationTests_testRedeemed - 2019.06.25 at 16h 50m 17s.xml">
+      <configuration name="DemoApplicationTests.testRedeemed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_testRedeemed - 2019.06.25 at 16h 51m 33s.xml">
+      <configuration name="DemoApplicationTests.testRedeemed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoApplicationTests_testRedeemed - 2019.06.25 at 16h 52m 15s.xml">
+      <configuration name="DemoApplicationTests.testRedeemed" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69559000" />
+    <option name="totallyTimeSpent" value="89017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22252011" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22788204" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -418,7 +482,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6515581" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37677053" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -427,7 +491,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -459,48 +523,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Favorite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/schedule.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.9.RELEASE/spring-data-jpa-2.1.9.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IPrizePicDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Administer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" selection-start-line="14" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IAdministerDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IStepDao.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Step.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -539,20 +561,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/indirect/PrPic.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Prize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
-          <folding>
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#1166#1167#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1238#1239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/indirect/UserStep.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -578,26 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IPrizeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IPrizeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IMessageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -614,24 +602,6 @@
           <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#854#855#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#1644#1645#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
-            <element signature="e#1724#1725#0" expanded="true" />
-            <element signature="e#1764#1765#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -726,16 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IFavoriteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="71" lean-forward="true" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/ArticleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
@@ -756,26 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IMyticketDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/ITicketDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Myticket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -786,26 +726,6 @@
             <element signature="e#836#837#0" expanded="true" />
             <element signature="e#878#879#0" expanded="true" />
             <element signature="e#910#911#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/StepServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -844,18 +764,6 @@
             <element signature="e#659#660#0" expanded="true" />
             <element signature="e#1662#1663#0" expanded="true" />
             <element signature="e#1696#1697#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/PrizeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1570#1571#0" expanded="true" />
-            <element signature="e#1609#1610#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -912,37 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IStepService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/component/MailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#520#543#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/component/ScheduledService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="55" column="7" lean-forward="true" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IAdministerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -953,27 +830,261 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://D:/Workplace/Spring_boot_learn/project/src/main/java/com/example/demo/Controller/TestConnection.java" />
+    <entry file="file://D:/Workplace/Spring_boot_learn/project/src/main/resources/templates/test/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state relative-caret-position="306">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/myapp/demo/DemoApplicationTests.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+        <state relative-caret-position="391">
+          <caret line="57" column="21" lean-forward="true" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/cotroller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/component/ScheduledService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="48" selection-end-column="21" />
+        <state relative-caret-position="134">
+          <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/component/MailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#632#655#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.9.RELEASE/spring-data-jpa-2.1.9.RELEASE.jar!/org/springframework/data/jpa/repository/JpaRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/StepServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1067#1068#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IStepService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="76" column="31" lean-forward="true" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="278" lean-forward="true" selection-start-line="278" selection-end-line="278" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IFavoriteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="71" lean-forward="true" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1675#1676#0" expanded="true" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1764#1765#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/MyPrize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IMyticketDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/ITicketDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IPrizeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="76" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/myapp/demo/DemoApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="131" column="16" selection-start-line="131" selection-start-column="16" selection-end-line="131" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/impl/PrizeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1721#1722#0" expanded="true" />
+            <element signature="e#2416#2417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/dao/IMyPrizeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/service/IPrizeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/myapp/demo/entity/Prize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="113" column="3" lean-forward="true" selection-start-line="113" selection-start-column="3" selection-end-line="113" selection-end-column="3" />
+          <folding>
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#832#833#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1238#1239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
