@@ -24,9 +24,11 @@ public class Ticket {
   @Column(name="content")
   private String content;
 
+  @Temporal(TemporalType.DATE)
   @Column(name="release_time")
   private Date releaseTime;
 
+  @Temporal(TemporalType.DATE)
   @Column(name="deadline")
   private Date deadline;
 

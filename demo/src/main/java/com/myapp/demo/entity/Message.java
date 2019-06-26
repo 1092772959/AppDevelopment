@@ -26,6 +26,7 @@ public class Message {
     @Column(name="content")
     private String content;
 
+    @Temporal(TemporalType.DATE)
     @Column(name="send_time")
     private Date sendTime;
 

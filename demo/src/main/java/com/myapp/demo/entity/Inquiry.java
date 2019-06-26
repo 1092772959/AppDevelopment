@@ -15,6 +15,7 @@ public class Inquiry {
   @Column(name="userid")
   private Integer userid;
 
+  @Temporal(TemporalType.DATE)
   @Column(name="release_time")
   private Date releaseTime;
 

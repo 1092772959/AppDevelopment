@@ -19,6 +19,7 @@ public class Reply {
   @Column(name="admin_id")
   private Integer adminId;
 
+  @Temporal(TemporalType.DATE)
   @Column(name="release_time")
   private Date releaseTime;
 
