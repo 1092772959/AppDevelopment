@@ -1,0 +1,58 @@
+{
+  "awardsList": [
+    {
+      "id": 1,
+      "name": "huawei P90",
+      "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562414569412&di=b09f53f32b32d7ecae49be26d0d8ef59&imgtype=0&src=http%3A%2F%2Fi1.wp.com%2Fthematictheme.com%2Fwp-content%2Fuploads%2F2012%2F07%2Foctocat.png%3Fresize%3D300%252C300",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "step": 1000
+    },
+    {
+      "id": 2,
+      "name": "rongyao v20",
+      "img": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562414569412&di=b09f53f32b32d7ecae49be26d0d8ef59&imgtype=0&src=http%3A%2F%2Fi1.wp.com%2Fthematictheme.com%2Fwp-content%2Fuploads%2F2012%2F07%2Foctocat.png%3Fresize%3D300%252C300",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "step": 1000
+    }
+  ],
+  "awardsUpdate": {},
+  "awardsDelete": [
+    {
+      "id": "1"
+    }
+  ],
+  "usersList": [
+    {
+      "id": 1,
+      "name": "foo",
+      "type": 0,
+      "step": 1000
+    },
+    {
+      "id": 2,
+      "name": "bar",
+      "type": 1,
+      "step": 0
+    }
+  ],
+  "usersUpdate": [
+    {
+      "id": "1"
+    },
+    [
+      {
+        "id": "1"
+      }
+    ],
+    [
+      {
+        "id": "1"
+      }
+    ]
+  ],
+  "newsUpdate": {
+    "title": "Untitled",
+    "date": "2019-07-06",
+    "content": " 111"
+  }
+}
