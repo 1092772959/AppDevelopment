@@ -34,6 +34,9 @@
 						<button id="btn-awards" class="btn btn-secondary" type="button" click="changeAwards()">
 							<a href="./awards.html">奖品更换</a>
 						</button>
+						<button id="btn-ticket" class="btn btn-secondary" type="button" click="changeAwards()">
+							<a href="./ticket.html">票务更换</a>
+						</button>
 						<button id="btn-news" class="btn btn-secondary" type="button">
 							<a href="./news.html">新闻推送</a>
 						</button>
@@ -49,22 +52,26 @@
 						<div id="playground" class="row">
 							<!-- content code -->
 
+							<div class="form-group">
+								<div id="img-display-wrap"> </div>
+								<label for="img"> 封面 </label>
+								<input id="file-upload" type="file" name="img" class="btn"/>
+							</div>
+							<div class="form-group">
+								<label for="title"> 标题 </label>
+								<input id="text-news-title" name="title" class="form-control">
+							</div>
+							<div class="form-group">
+								<label for="date"> 日期 </label>
+								<input id="text-news-date" name="date" type="date" class="form-control">
+							</div>
+							<div class="form-group">
+								<label for="content"> 内容 </label>
+								<textarea id="text-news-content" name="content" class="form-control"> </textarea>
+							</div>
 
-								<div class="form-group">
-									<label for="title"> 标题 </label>
-									<input id="text-news-title" name="title" class="form-control">
-								</div>
-								<div class="form-group">
-									<label for="date"> 日期 </label>
-									<input id="text-news-date" name="date" type="date" class="form-control">
-								</div>
-								<div class="form-group">
-									<label for="content"> 内容 </label>
-									<textarea id="text-news-content" name="content" class="form-control"> </textarea>
-								</div>
+							<button id="btn-news-submit" type="submit" class="btn btn-primary"> 发布 </button>
 
-								<button id="btn-news-submit" type="submit" class="btn btn-primary"> 发布 </button>
-								
 
 						</div>
 					</div>
@@ -74,6 +81,7 @@
 	</div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/1.10.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="./static/js/news.js"></script>
 </html>

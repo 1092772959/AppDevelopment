@@ -1,8 +1,8 @@
-const urlHost = 'http://localhost:8080';
+const urlHost = 'http://www.xiuwenli.cn:8080';
 const urlMap = {
-	users: urlHost+"/api/manager/users",
-	awards: urlHost+"/api/manager/awards",
-	news: urlHost+"/api/manager/news"
+	users: urlHost+"/host/api/manager/users",
+	awards: urlHost+"/host/api/manager/awards",
+	news: urlHost+"/host/api/manager/news"
 }
 
 $(function()
@@ -20,13 +20,21 @@ $(function()
 function getUserList()
 {
 	$.ajax({
-		type: "get",
+		type: "post",
+		headers: {
+			"Authorization": $.cookie("token")
+		},
+		data: $.param({
+			userId: $.cookie("userId"),
+		}),
 		url: urlMap["users"]+"/list",
 		dataType: "json",
 		success: function (data) {
-			createTable(data);
+			//console.log(data);
+			createTable(data.data);
 		},
 		error: function(data) {
+			//console.log(data);
 			alert("获取用户列表失败，请确认服务器是否正常");
 		}
 	});
@@ -39,7 +47,7 @@ function createTable(userList)
 		<tbody> </tbody>
 	`);
 
-	const props = ["name", "step", "type"];
+	const props = ["username", "totalStep", "type"];
 
 	$.each(userList, (i, user)=>
 	{
@@ -72,28 +80,49 @@ function createTable(userList)
 
 function reviseMemberStatus()
 {
-	data = []
+	ls_data = []
 	$.each($("tr"), (i, e)=> {
 		ls = $(e).children();
 		$input = $(ls[4]);
-		if( $input.context && $input.val() !== '') {
-			//console.log($(ls[0]).text());
-			data.push({id: $(ls[0]).text()});
+		if( $input.context && $input.val() !== '')
+		{
+			ls_data.push({
+				userId: $.cookie("userId"),
+				updateId: $(ls[0]).text(),
+				type: String($input.val())==="会员"? 1: 0,
+			});
 		}
 	});
-	//console.log(data);
-	if( !data.length) return ;
 
-	$.ajax({
-		type: "post",
-		url: urlMap["users"]+"/update",
-		data: JSON.stringify(data),
-		contentType: "application/json;charset=UTF-8",
-		error: function(xhr) {
+	if( !ls_data.length) return ;
+
+	var succ = 1;
+	for( let i = 0; i < ls_data.length; i++)
+	{
+		data = ls_data[i];
+		console.log(data);
+
+		$.ajax({
+			type: "post",
+			headers: {
+				"Authorization": $.cookie("token")
+			},
+			url: urlMap["users"]+"/update",
+			data: $.param(data),
+			async: false,
+			error: function(xhr) {
+				succ = 0;
+			},
+			success: function(data) {
+				console.log(data);
+			}
+		});
+
+		if( !succ) {
 			alert("上传请求失败");
-		},
-		success: function() {
-			window.location.reload();
+			break;
 		}
-	});
+	}
+
+	if( succ) window.location.reload();
 }

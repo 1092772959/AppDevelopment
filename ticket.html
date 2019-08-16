@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<link rel="stylesheet" href="./static/css/home.css">
+	<link rel="stylesheet" href="./static/css/awards.css">
 </head>
 
 <body>
@@ -51,19 +52,48 @@
 						<div id="playground" class="row">
 							<!-- content code -->
 
-
-							<table id='user-list' class="table table-hover table-bordered table-striped">
-								<!-- <caption> 用户列表 </caption> -->
-								<thead>
-									<tr>
-										<th scope="col"> 序号 </th>
-										<th scope="col"> 姓名 </th>
-										<th scope="col"> 步数 </th>
-										<th scope="col"> 类别 </th>
+							<div id="table-anchor" class="col-md-6">
+								<table id="awards-list" class="table table-hover table-bordered table-striped">
+									<thead>
+										<tr>
+											<th scope="col"> 序号 </th>
+											<th scope="col"> 名称 </th>
+											<th scope="col"> 图片 </th>
+											<th scope="col"> 描述 </th>
+											<th scope="col"> 库存 </th>
+											<th scope="col"> 时间 </th>
+										</thead>
 									</tr>
-								</thead>
-							</table>
-							<button id="btn-revise-memeber-status" class="btn btn-primary"> 修改会员身份 </button>
+								</table>
+
+								<button id="btn-del-awards" class="btn btn-primary"> 删除奖品 </button>
+							</div>
+
+
+
+							<div id="img-awards" class="col-md-4 col-md-offset-2">
+								<div id="img-display-wrap"> </div>
+								<input id="file-upload" type="file"/>
+
+								<div>
+									<label for="name"> 名称： </label>
+									<input name="name" id="text-name">
+								</div>
+
+								<textarea id="text-awards-desc" placeholder="描述"></textarea>
+
+								<div>
+									<label for="step"> 有效时间：</label>
+									<input name="step" id="text-step-threshold" type="number" placeholder="0"/> 天
+								</div>
+								<div>
+									<label for="cnt"> 奖品数量：</label>
+									<input name="cnt" id="text-cnt-threshold" type="number" placeholder="0"/>
+								</div>
+
+								<button id="btn-awards-upload"> 上传 </button>
+							</div>
+
 
 						</div>
 					</div>
@@ -75,5 +105,5 @@
 <script src="https://cdn.bootcss.com/jquery/1.10.0/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="./static/js/home.js"></script>
+<script src="./static/js/ticket.js"></script>
 </html>
