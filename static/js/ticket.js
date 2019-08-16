@@ -2,12 +2,13 @@ const urlHost = 'http://www.xiuwenli.cn:8080';
 const urlMap = {
 	users: urlHost+"/host/api/manager/users",
 	awards: urlHost+"/host/api/manager/awards",
-	news: urlHost+"/host/api/manager/news"
-}
+	news: urlHost+"/host/api/manager/news",
+	ticket: urlHost+"/host/api/manager/ticket"
+};
 
 $(function()
 {
-	getAwardList();
+	getTicketList();
 	$("#file-upload").change((event)=> {
 		uploadImage(event);
 	});
@@ -45,19 +46,21 @@ function uploadInfo()
 {
 	var data = {}
 	data.img = $("#img-display").prop("src");
-	data.name = $("#text-name").val();
-	data.desc = $("#text-awards-desc").val();
-	data.step = validate($("#text-step-threshold").val());
+	data.video = null;
+	data.title = $("#text-name").val();
+	data.content = $("#text-awards-desc").val();
 	data.cnt = validate($("#text-cnt-threshold").val());
+	data.time = validate($("#text-step-threshold").val());
 	data.userId = $.cookie("userId");
 
 	$.ajax({
 		type: "post",
-		url: urlMap["awards"]+"/update",
+		url: urlMap["ticket"]+"/add",
 		headers: { "Authorization": $.cookie("token") },
 		data: $.param(data),
 		async: false,
 		error: function(xhr) {
+			console.log(xhr);
 			alert("上传请求失败");
 		},
 		success: function(data) {
@@ -67,18 +70,19 @@ function uploadInfo()
 	});
 }
 
-function getAwardList()
+function getTicketList()
 {
 	$.ajax({
 		type: "post",
 		headers: { "Authorization": $.cookie("token") },
 		data: $.param({ "userId": $.cookie("userId") }),
-		url: urlMap["awards"]+"/list",
+		url: urlMap["ticket"]+"/getAll",
 		dataType: "json",
 		success: function (data) {
 			createTable(dataHandler(data.data));
 		},
 		error: function(data) {
+			console.log(data);
 			alert("获取奖品列表失败，请确认服务器是否正常");
 		}
 	});
@@ -92,10 +96,11 @@ function dataHandler(ls)
 			id: data["id"],
 			name: data["title"],
 			desc: data["content"],
-			img: data["srcUrl"],
-			step: data["stepNeed"],
+			img: data["iconPath"],
 			num: data["remain"] +
-			  " / " + data["cnt"]
+			  " / " + data["cnt"],
+			dur: data["releaseTime"] +
+			  " - " + data["deadline"]
 		});
 	});
 
@@ -104,10 +109,12 @@ function dataHandler(ls)
 
 function createTable(awardsList)
 {
+	console.log(awardsList);
+
 	$table = $("#awards-list");
 	$tbody = $(`<tbody> </tbody>`);
 
-	const props = ["name", "img", "desc", "step", "num"];
+	const props = ["name", "img", "desc", "num", "dur"];
 
 	$.each(awardsList, (i, awards)=>
 	{
@@ -143,11 +150,12 @@ function executeDelete()
 		$input = $(ls[6]);
 		if( $input.prop("checked")) {
 			// console.log($(ls[0]).text());
-			ls_data.push({prizeId: $(ls[0]).text()});
+			ls_data.push({ticketId: $(ls[0]).text()});
 		}
 	});
 
 	if( !ls_data.length) return ;
+	console.log(ls_data);
 
 	$.each(ls_data, (i, data)=> {
 		data.userId = $.cookie("userId");
@@ -161,7 +169,7 @@ function deletePost(data)
 
 	$.ajax({
 		type: "post",
-		url: urlMap["awards"]+"/delete",
+		url: urlMap["ticket"]+"/delete",
 		data: $.param(data),
 		headers: { "Authorization": $.cookie("token") },
 		async: false,

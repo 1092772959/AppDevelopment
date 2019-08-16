@@ -23,5 +23,9 @@
 
 #text-step-threshold {
 	margin-top: 1%;
-	width: 30px;
+	width: 80px;
+}
+#text-cnt-threshold {
+	margin-top: 1%;
+	width: 80px;
 }
