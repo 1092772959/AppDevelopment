@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+		integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<link rel="stylesheet" href="./static/css/home.css">
 	<link rel="stylesheet" href="./static/css/awards.css">
+	<style>
+		.bkg {
+			background-color: lightblue;
+			background-clip: padding-box
+		}
+	</style>
 </head>
 
 <body>
@@ -31,7 +40,7 @@
 						<button id="btn-users" class="btn btn-secondary" type="button">
 							<a href="./home.html">用户名单</a>
 						</button>
-						<button id="btn-awards" class="btn btn-secondary" type="button" click="changeAwards()">
+						<button id="btn-awards" class="bkg btn btn-secondary" type="button" click="changeAwards()">
 							<a href="./awards.html">奖品更换</a>
 						</button>
 						<button id="btn-ticket" class="btn btn-secondary" type="button" click="changeAwards()">
@@ -62,7 +71,7 @@
 											<th scope="col"> 描述 </th>
 											<th scope="col"> 步数 </th>
 											<th scope="col"> 库存 </th>
-										</thead>
+									</thead>
 									</tr>
 								</table>
 
@@ -73,7 +82,7 @@
 
 							<div id="img-awards" class="col-md-4 col-md-offset-2">
 								<div id="img-display-wrap"> </div>
-								<input id="file-upload" type="file"/>
+								<input id="file-upload" type="file" />
 
 								<div>
 									<label for="name"> 名称： </label>
@@ -84,11 +93,11 @@
 
 								<div>
 									<label for="step"> 步数要求：</label>
-									<input name="step" id="text-step-threshold" type="number" placeholder="0"/>
+									<input name="step" id="text-step-threshold" type="number" placeholder="0" />
 								</div>
 								<div>
 									<label for="cnt"> 奖品数量：</label>
-									<input name="cnt" id="text-cnt-threshold" type="number" placeholder="0"/>
+									<input name="cnt" id="text-cnt-threshold" type="number" placeholder="0" />
 								</div>
 
 								<button id="btn-awards-upload"> 上传 </button>
@@ -104,6 +113,9 @@
 </body>
 <script src="https://cdn.bootcss.com/jquery/1.10.0/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
 <script src="./static/js/awards.js"></script>
+
 </html>
